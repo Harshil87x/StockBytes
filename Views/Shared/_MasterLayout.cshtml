@@ -1,0 +1,90 @@
+﻿@using Microsoft.AspNetCore.Http;
+@* @inject IHttpContextAccessor HttpContextAccessor *@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <title>@ViewBag.Title</title>
+    <style type="text/css">
+        * {
+            font-family: "Jost", sans-serif;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        .tbl_cont {
+            padding: 2px;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            border: 1px solid #c9bbda;
+            /* border-radius: 18px; */
+            background-color: #f0eaf7;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .Navitems a, td {
+            padding: 10px;
+            text-align: center;
+      /*        border: 1px solid #c9bbda;
+                    border-radius: 20px; */
+            color: #8b00bd;
+            /*  background-color: #f0e4ff; */
+            text-decoration: none;
+            /* box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1); */
+        }
+
+            .Navitems a:hover {
+                border-radius: 20px; 
+                color: #f0e4ff;
+                background-color: #7a00a0
+            }
+
+        .NavitemsImg img {
+            width: 7vw;
+            display: inline-block;
+        }
+
+        .NavitemsImg {
+            display: inline-block;
+            height: 13vh;
+            width: 7vw;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+
+    <table class="tbl_cont">
+        <tr>
+            <td class="NavitemsImg"> <img src="/PagePicsi/StockBytesFinalCut-removebg-preview.png" alt=""></td>
+            <td class="Navitems"> @Html.ActionLink("Explore", "Home", "SP")</td>
+            <td class="Navitems">@Html.ActionLink("Markets", "DisplayData", "SP")</td>
+            <td class="Navitems">@Html.ActionLink("Sip Calculator", "DisplayData", "SP")</td>
+            <td class="Navitems">@Html.ActionLink("Account ", "Uploader", "SP")</td>
+            <td class="Navitems">@Html.ActionLink("About Us", "Uploader", "SP")</td>
+            <td class="Navitems">@Html.ActionLink("Log Out", "Logout", "SP")</td>
+           @*  <td>Welcome Back: @HttpContextAccessor.HttpContext.Session.GetString("Fname")  </td>
+            <td>Login Time: @HttpContextAccessor.HttpContext.Session.GetString("LoginTime")</td> *@
+        </tr>
+    </table>
+    <div class="">
+        @RenderBody()
+    </div>
+    <table class="tbl_cont">
+        <tr>
+            <td class="Navitems">Work With Us</td>
+            <td class="Navitems">Our Story</td>
+            <td class="Navitems">copyright</td>
+            <td class="Navitems">DMCA</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,126 @@
+﻿ @model memberLoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Page</title>
+
+    <style type="text/css">
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgb(73 72 72);
+            padding: 20px;
+            text-align: center;
+            width: 40vw;
+            background-color: hsl(272.57deg 100% 95.21% / 50%);
+            backdrop-filter: blur(3px);
+        }
+
+        .greeting-box {
+            margin-bottom: 20px;
+            border-radius: 14px;
+        }
+
+            .greeting-box h1 {
+                color: #a957ff;
+                margin: 0;
+                text-align: center;
+            }
+
+        label {
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .textbox {
+            height: 10vh;
+            width: 100%;
+            margin-bottom: 16px;
+            padding: 8px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 8px 2px #7a7a7a;
+            border-radius: 18px;
+        }
+
+        .submit-button {
+            background-color: #a957ff;
+            color: #fff;
+            width: 12vw;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+            .submit-button a {
+                color: #fff;
+                text-decoration: none
+            }
+
+            .submit-button:hover {
+                background-color: #9C27B0;
+            }
+
+        .RegistrationCont h5 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        body {
+            margin: 0px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="greeting-box">
+            <h1>Welcome! Please Login Here</h1>
+        </div>
+        @using (Html.BeginForm())
+        {
+            <div>
+                <label for="EmailID">Email ID</label>
+                @Html.TextBoxFor(model => model.EmailID, new { @class = "textbox", placeholder = "Enter your Email ID" })
+            </div>
+            <div>
+                <label for="Password">password</label>
+                @Html.TextBoxFor(model => model.Password, new { @class = "textbox", placeholder = "Enter your Password" })
+            </div>
+            <input type="submit" name="submit" value="Submit" class="submit-button" />
+            <div class="RegistrationCont">
+                <h5>Not Have An Account? </h5>
+                <button class="submit-button">@Html.ActionLink("Sign Up Here!", "memberRegistration", "StockByte")</button>
+            </div>
+
+        }
+    </div>
+
+</body>
+</html>
