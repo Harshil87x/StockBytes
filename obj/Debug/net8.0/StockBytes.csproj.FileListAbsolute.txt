@@ -123,7 +123,6 @@ C:\Users\harsh\source\repos\StockBytes\StockBytes\obj\Debug\net8.0\staticwebasse
 C:\Users\harsh\source\repos\StockBytes\StockBytes\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\harsh\source\repos\StockBytes\StockBytes\obj\Debug\net8.0\scopedcss\bundle\StockBytes.styles.css
 C:\Users\harsh\source\repos\StockBytes\StockBytes\obj\Debug\net8.0\scopedcss\projectbundle\StockBytes.bundle.scp.css
-C:\Users\harsh\source\repos\StockBytes\StockBytes\obj\Debug\net8.0\StockBytes.csproj.CopyComplete
 C:\Users\harsh\source\repos\StockBytes\StockBytes\obj\Debug\net8.0\StockBytes.dll
 C:\Users\harsh\source\repos\StockBytes\StockBytes\obj\Debug\net8.0\refint\StockBytes.dll
 C:\Users\harsh\source\repos\StockBytes\StockBytes\obj\Debug\net8.0\StockBytes.pdb
@@ -259,3 +258,5 @@ C:\Users\harsh\source\repos\StockBytes\StockBytes\bin\Debug\net8.0\runtimes\win\
 C:\Users\harsh\source\repos\StockBytes\StockBytes\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\harsh\source\repos\StockBytes\StockBytes\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\harsh\source\repos\StockBytes\StockBytes\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\harsh\source\repos\StockBytes\StockBytes\obj\Debug\net8.0\StockBytes.sourcelink.json
+C:\Users\harsh\source\repos\StockBytes\StockBytes\obj\Debug\net8.0\StockBytes.csproj.Up2Date

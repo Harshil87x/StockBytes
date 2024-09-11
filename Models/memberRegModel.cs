@@ -34,7 +34,7 @@ namespace StockBytes.Models
         public string Confirmpwd { get; set; }
 
         [Required(ErrorMessage = "Contact Number required")]
-        public int Contact_Number { get; set; }
+        public decimal Contact_Number { get; set; }
 
         [Required(ErrorMessage = "Gender required")]
         public string Gender { get; set; }
@@ -49,11 +49,11 @@ namespace StockBytes.Models
         public bool watchlist3 { get; set; }
         public bool watchlist4 { get; set; }
         public bool watchlist5 { get; set; }
-        public bool watchlist6 { get; set; }
-        public bool watchlist7 { get; set; }
-        public bool watchlist8 { get; set; }
-        public bool watchlist9 { get; set; }
-        public bool watchlist10 { get; set; }
+        //public bool watchlist6 { get; set; }
+        //public bool watchlist7 { get; set; }
+        //public bool watchlist8 { get; set; }
+        //public bool watchlist9 { get; set; }
+        //public bool watchlist10 { get; set; }
 
 
     }

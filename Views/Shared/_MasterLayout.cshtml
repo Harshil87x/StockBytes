@@ -55,6 +55,10 @@
             height: 13vh;
             width: 7vw;
         }
+         .mainBody {
+            display: block;
+           border: 8px solid black;
+        }
 
         
     </style>
@@ -75,9 +79,11 @@
             <td>Login Time: @HttpContextAccessor.HttpContext.Session.GetString("LoginTime")</td> *@
         </tr>
     </table>
-    <div class="">
+    <div class="mainBody">
         @RenderBody()
     </div>
+    <footer>
+
     <table class="tbl_cont">
         <tr>
             <td class="Navitems">Work With Us</td>
@@ -86,5 +92,6 @@
             <td class="Navitems">DMCA</td>
         </tr>
     </table>
+    </footer>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "L08/+k/33WNB1vHJZCC+uZcYUjPAtUWG/c0HOl5YjXM=",
+  "Hash": "c5WEqA47kFsJADZX3AzJXf1dxD6DJbsSj8QjybKauDo=",
   "Source": "StockBytes",
   "BasePath": "_content/StockBytes",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\harsh\\source\\repos\\StockBytes\\StockBytes\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\StockBytes.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\harsh\\source\\repos\\StockBytes\\StockBytes\\wwwroot\\css\\homeStyle.css",
+      "SourceId": "StockBytes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\harsh\\source\\repos\\StockBytes\\StockBytes\\wwwroot\\",
+      "BasePath": "_content/StockBytes",
+      "RelativePath": "css/homeStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\homeStyle.css"
     },
     {
       "Identity": "C:\\Users\\harsh\\source\\repos\\StockBytes\\StockBytes\\wwwroot\\css\\site.css",

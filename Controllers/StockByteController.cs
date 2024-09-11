@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Mono.TextTemplating;
 using StockBytes.Models;
 
 namespace StockBytes.Controllers
@@ -32,45 +34,53 @@ namespace StockBytes.Controllers
             string msg = "";
             if (obj.watchlist1 == true)
             {
-                msg = msg + "Hindalco" + "";
+                msg = msg + "FMCG" + "";
             }
 
             if (obj.watchlist2 == true)
             {
-                msg = msg + ", Sail" + "";
+                msg = msg + ", IT" + "";
             }
             if (obj.watchlist3 == true)
             {
-                msg = msg + ", Eicher-Motors" + "";
+                msg = msg + ", BANKS" + "";
             }
             if (obj.watchlist4 == true)
             {
-                msg = msg + ", Wipro" + "";
+                msg = msg + ", PHARMA" + "";
             }
             if (obj.watchlist5 == true)
             {
-                msg = msg + ", Tata-Motors" + "";
+                msg = msg + ", REAL-ESTATE" + "";
             }
-            if (obj.watchlist6 == true)
-            {
-                msg = msg + ", SBI" + "";
-            }
-            if (obj.watchlist7 == true)
-            {
-                msg = msg + ", Greenply" + "";
-            }
-            if (obj.watchlist8 == true)
-            {
-                msg = msg + ", HCL" + "";
-            }
-            if (obj.watchlist9 == true)
-            {
-                msg = msg + ", Kotak" + "";
-            }
-            if (obj.watchlist10 == true)
-            {
-                msg = msg + ", Tech-Mahindra" + "";
-            }
+
+
+
+
+
+
+
+            //if (obj.watchlist6 == true)
+            //{
+            //    msg = msg + ", SBI" + "";
+            //}
+            //if (obj.watchlist7 == true)
+            //{
+            //    msg = msg + ", Greenply" + "";
+            //}
+            //if (obj.watchlist8 == true)
+            //{
+            //    msg = msg + ", HCL" + "";
+            //}
+            //if (obj.watchlist9 == true)
+            //{
+            //    msg = msg + ", Kotak" + "";
+            //}
+            //if (obj.watchlist10 == true)
+            //{
+            //    msg = msg + ", Tech-Mahindra" + "";
+            //}
+
 
 
             string sql = "exec sp_inserttoMemberRecords @First_Name,@Last_Name,@EmailID,@Password,@Contact_Number,@Gender,@Dob,@Watchlist";
@@ -84,13 +94,15 @@ namespace StockBytes.Controllers
              new SqlParameter {ParameterName = "@Gender", Value = obj.Gender},
              new SqlParameter { ParameterName = "@Dob", Value = obj.DOB },
             new SqlParameter { ParameterName = "@Watchlist", Value = msg },
+
         };
+
+
             var res = _context.Database.ExecuteSqlRaw(sql, param.ToArray());
             if (res > 0)
             {
-                ViewBag.SuccessMessage = "Your Account Has been created successfully!";
-                //return RedirectToAction("memberLogin", "StockByte");
-                return View();
+                TempData["SuccessMessage"] = "Data submitted successfully";
+                //ViewBag.SuccessMessage = "Your Account Has been created successfully!";
             }
             else
             {
@@ -122,7 +134,7 @@ namespace StockBytes.Controllers
 
                 if (res != null)
                 {
-                    return RedirectToAction("memberRegistration", "StockByte");
+                    return RedirectToAction("homePage", "StockByte");
                 }
                 else
                 {

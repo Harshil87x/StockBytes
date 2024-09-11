@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\PagePicsi\\StockBytesFinalCut-removebg-preview.png"
     },
     {
+      "Id": "C:\\Users\\harsh\\source\\repos\\StockBytes\\StockBytes\\wwwroot\\css\\homeStyle.css",
+      "PackagePath": "staticwebassets\\css\\homeStyle.css"
+    },
+    {
       "Id": "C:\\Users\\harsh\\source\\repos\\StockBytes\\StockBytes\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

@@ -69,10 +69,7 @@
             border-radius: 20px;
             cursor: pointer;
             font-size: 16px;
-
         }
-
-        
 
         .submit-button:hover {
             background-color: #9C27B0;
@@ -123,6 +120,18 @@
 </head>
 <body>
   <div class=" formsection">
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                  @TempData["SuccessMessage"]
+        </div>
+            <script>
+                setTimeout(function () {
+                    window.location.href = '@Url.Action("memberLogin", "StockByte")';
+                }, 3000);
+            </script>
+        }
 
       @using (Html.BeginForm())    {
 
@@ -191,32 +200,33 @@
 
             <div class="watchlistbox"> 
 
-                <center><label>Your Watchlist<span class="text-danger">*</span></label></center>
+                <center><label>Prefered Industries<span class="text-danger">*</span></label></center>
                 <br/>
                 <div class="chkboxes">
-                @Html.CheckBoxFor(model => model.watchlist1, new { @id1 = "Hindalco-true" })
-                @Html.Label("Hindalco-true", "Hindalco")
+                @Html.CheckBoxFor(model => model.watchlist1, new { @id1 = "FMCG-true" })
+                            @Html.Label("FMCG-true", "FMCG")
                         </div>
 
                         <div class="chkboxes">
-                @Html.CheckBoxFor(model => model.watchlist2, new { @id2 = "Sail-true" })
-                @Html.Label("Sail-true", "Sail")
+                @Html.CheckBoxFor(model => model.watchlist2, new { @id2 = "IT-true" })
+                            @Html.Label("IT-true", "IT")
                         </div>
 
                         <div class="chkboxes">
-                @Html.CheckBoxFor(model => model.watchlist3, new { @id3 = "Eicher-Motors-true" })
-                @Html.Label("Eicher-Motors-true", "Eicher-Motors")
+                @Html.CheckBoxFor(model => model.watchlist3, new { @id3 = "BANKS-true" })
+                            @Html.Label("BANKS-true", "BANKS")
                         </div>
 
                         <div class="chkboxes">
-                @Html.CheckBoxFor(model => model.watchlist4, new { @id4 = "Wipro-true" })
-                @Html.Label("Wipro-true", "Wipro")
+                @Html.CheckBoxFor(model => model.watchlist4, new { @id4 = "PHARMA-true" })
+                            @Html.Label("PHARMA-true", "PHARMA")
                         </div>
                         <div class="chkboxes">
-                @Html.CheckBoxFor(model => model.watchlist5, new { @id5 = "Tata-Motors-true" })
-                @Html.Label("Tata-Motors-true", "Tata-Motors")
+                 @Html.CheckBoxFor(model => model.watchlist5, new { @id5 = "REAL-ESTATE-true" })
+                @Html.Label("REAL-ESTATE-true", "REAL-ESTATE")
                         </div>
                         <div class="chkboxes">
+                            @*
                 @Html.CheckBoxFor(model => model.watchlist6, new { @id6 = "SBI-true" })
                 @Html.Label("SBI-true", "SBI")
                         </div>
@@ -235,26 +245,15 @@
                         <div class="chkboxes">
                 @Html.CheckBoxFor(model => model.watchlist10, new { @id10 = "Tech-Mahindra-true" })
                 @Html.Label("Tech-Mahindra-true", "Tech-Mahindra")
-                        </div>
+                        </div> *@
             </div>
                 </center>
             <center>
             <div class="form-group">
-                <input type="submit" value="Submit" class="submit-button"}>
+                <input type="submit" value="Submit" class="submit-button">
             </div>
+
             </center>
-            @{
-                if (ViewBag.SuccessMessage != null)
-                {
-                    <div>
-                        <script>
-                            // Display an alert  <h3 class="text-success">@ViewBag.SuccessMessage</h3>
-                            alert("Your data has been submitted!");
-                        </script>
-                       
-                    </div>
-                }
-            }
         </div>
     }
     </div>
